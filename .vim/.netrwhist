@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/media/theo/KINGSTON/dev/C++/2017_09_SFML_Test'
+let g:netrw_dirhist_2='/media/theo/KINGSTON/dev/C++'
+let g:netrw_dirhist_3='/media/theo/KINGSTON/dev/C++/2017_09_SFML_Test'

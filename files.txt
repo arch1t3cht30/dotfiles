@@ -1,0 +1,12 @@
+.ghci
+.bashrc
+.vim
+.tmux.conf
+test
+.config/nvim/init.vim
+.config/i3/config
+.Xdefaults
+test2
+.vimrc
+testdir/test3
+.config/polybar/config

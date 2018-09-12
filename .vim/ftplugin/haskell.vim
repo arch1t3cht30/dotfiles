@@ -12,8 +12,6 @@ nnoremap <Leader>hl :w<cr>:InteroLoadCurrentFile<cr>
 nnoremap <Leader>hr :w<cr>:InteroReload<cr>
 nnoremap <Leader>hd :IntegroGoToDef
 
-autocmd FileType haskell nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr>
-
 " let g:ghcmod_use_basedir = '$HOME/.local/bin/ghc-mod'
 
 " Disable haskell-vim omnifunc

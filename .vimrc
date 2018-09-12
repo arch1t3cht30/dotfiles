@@ -222,6 +222,8 @@ source ~/.vim/physical_moves.vim
 
 " ALE
 let b:ale_linters = ['pyflakes', 'flake8', 'pylint', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
+nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr>
+
 " let g:ale_sign_error = '✘'
 " let g:ale_sign_warning = '⚠'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red

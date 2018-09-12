@@ -42,7 +42,6 @@ Plugin 'w0rp/ale'
 " Languages
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/deoplete.nvim'
-Plugin 'ervandew/supertab'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -222,7 +221,11 @@ source ~/.vim/physical_moves.vim
 
 " ALE
 let b:ale_linters = ['pyflakes', 'flake8', 'pylint', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
-nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr>
+nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr><C-W>j
+
+nnoremap <silent> <leader>aj :lnext<cr>
+nnoremap <silent> <leader>ak :lprev<cr>
+nnoremap <silent> <leader>aq <C-W>k:q<cr>
 
 " let g:ale_sign_error = '✘'
 " let g:ale_sign_warning = '⚠'
@@ -281,7 +284,8 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>
 
 " YCM
 " let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'

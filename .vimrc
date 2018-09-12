@@ -195,10 +195,8 @@ endif
 set foldmethod=indent
 set foldlevel=99
 
-
 " Bindings
 let mapleader=","
-
 
 inoremap <F1> <Esc>
 nnoremap ci$ T$ct$
@@ -217,45 +215,12 @@ tnoremap <Esc> <C-\><C-n>
 " Commands
 command Vimrc :tabnew ~/.vimrc
 
-" Haskell
-nnoremap <Leader>hw :w<cr>:GhcModTypeInsert<cr>
-nnoremap <Leader>hs :w<cr>:GhcModSplitFunCase<cr>
-nnoremap <Leader>hq :w<cr>:GhcModType<cr>
-nnoremap <Leader>he :w<cr>:GhcModTypeClear<cr>
-
-nnoremap <Leader>hi :InteroOpen<cr>
-nnoremap <Leader>hc :InteroHide<cr>
-nnoremap <Leader>hl :InteroLoadCurrentFile<cr>
-nnoremap <Leader>hr :InteroReload<cr>
-nnoremap <Leader>hd :IntegroGoToDef
-
-autocmd FileType haskell nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr>
-
-" let g:ghcmod_use_basedir = '$HOME/.local/bin/ghc-mod'
-
-" Disable haskell-vim omnifunc
-let g:haskellmode_completion_ghc = 0
-
-" neco-ghc
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let g:ncoghc_enable_detailed_browse = 1
-
-let g:hindent_on_save = 0
-au FileType haskell nnoremap <silent> <leader>ph :Hindent<CR>
-au FileType haskell nnoremap <silent> <leader>ps :Stylishsk<CR>
-
-au FileType haskell nnoremap <silent> <leader>ims :HsimportSymbol<CR>
-au FileType haskell nnoremap <silent> <leader>imm :HsimportModule<CR>
-
-let g:stylishask_on_save = 0
-
 " Move by screen line and not by buffer line
 source ~/.vim/physical_moves.vim
 
 " Plugin configuration
 
 " ALE
-
 let b:ale_linters = ['pyflakes', 'flake8', 'pylint', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
 
 " Pymode
@@ -288,7 +253,6 @@ let g:indent_guides_color_change_percent = 3
 " let g:indent_guides_enable_on_vim_startup = 1
 
 " Solarized
-
 if has('gui_running')
     set background=dark
     colorscheme solarized

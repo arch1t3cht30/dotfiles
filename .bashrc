@@ -122,7 +122,7 @@ sps() {
 alias vim="nvim"
 alias vi="nvim"
 
-export VISUAL="vim"
+export VISUAL="nvim"
 
 export PATH=$HOME/.local/bin:$PATH
 
@@ -131,5 +131,10 @@ eval $(thefuck --alias)
 GHC_PATH=`stack path | grep compiler-bin | sed -e 's/compiler-bin: //'`
 export PATH="$GHC_PATH:$PATH"
 
-ln -sf Documents/wallpapers/Wall_$(( ( RANDOM % 2 )  + 1 )).png .wallpaper
-
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'

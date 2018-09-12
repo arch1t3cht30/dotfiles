@@ -34,6 +34,7 @@ def add_to_list(names):
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in ["create", "extract"]:
         print("Usage: {} <create/extract> [FILES]")
+        exit()
     if sys.argv[1] == "extract":
         for name in get_list():
             doln(name)

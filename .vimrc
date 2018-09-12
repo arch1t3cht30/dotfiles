@@ -23,6 +23,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'junegunn/fzf.vim'
 Plugin 'lambdalisue/suda.vim'
+Plugin 'tmhedberg/SimpylFold'
 
 " Features
 Plugin 'scrooloose/nerdtree'
@@ -34,7 +35,6 @@ Plugin 'mbbill/undotree'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tmhedberg/SimpylFold'
 
 " LINT
 Plugin 'w0rp/ale'
@@ -231,7 +231,7 @@ nnoremap <Leader>hd :IntegroGoToDef
 
 autocmd FileType haskell nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr>
 
-let g:ghcmod_use_basedir = '$HOME/.local/bin/ghc-mod'
+" let g:ghcmod_use_basedir = '$HOME/.local/bin/ghc-mod'
 
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0

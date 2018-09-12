@@ -222,6 +222,10 @@ source ~/.vim/physical_moves.vim
 
 " ALE
 let b:ale_linters = ['pyflakes', 'flake8', 'pylint', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
+" let g:ale_sign_error = '✘'
+" let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=None ctermfg=yellow
 
 " Pymode
 let g:pymode_python = 'python3'

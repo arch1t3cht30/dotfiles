@@ -168,6 +168,8 @@ set wildmode=longest,list,full
 set wildmenu
 set completeopt+=longest
 
+set updatetime=100
+
 " PEP8-formatting
 au BufNewFile,BufRead *.py
     \ set tabstop=4         |

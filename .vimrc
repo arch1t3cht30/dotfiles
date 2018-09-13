@@ -210,6 +210,8 @@ map <F12> :set hls!<CR>
 
 nnoremap <leader>w :w suda://%<CR>
 tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>t :split term://bash<CR>
+nnoremap <leader>vt :vsplit term://bash<CR>
 
 " Commands
 command Vimrc :tabnew ~/.vimrc

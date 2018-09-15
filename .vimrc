@@ -10,61 +10,61 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Basic
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-sensible'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-commentary'
-Plugin 'tommcdo/vim-lion'
-Plugin 'godlygeek/tabular'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'junegunn/fzf.vim'
-Plugin 'lambdalisue/suda.vim'
-Plugin 'tmhedberg/SimpylFold'
+Plugin 'tpope/vim-unimpaired'            " bracket maps
+Plugin 'tpope/vim-surround'              " manage surrounding brackets
+Plugin 'tpope/vim-eunuch'                " unix command bindings
+Plugin 'tpope/vim-sensible'              " basic settings
+Plugin 'vim-airline/vim-airline'         " status line
+Plugin 'tpope/vim-commentary'            " comment code
+Plugin 'tommcdo/vim-lion'                " aligning
+Plugin 'godlygeek/tabular'               " tables
+Plugin 'dhruvasagar/vim-table-mode'      " tables 
+Plugin 'nathanaelkane/vim-indent-guides' " indent guides
+Plugin 'terryma/vim-multiple-cursors'    " multiple cursors
+Plugin 'junegunn/fzf.vim'                " fuzzy finder
+Plugin 'lambdalisue/suda.vim'            " sudo write
+Plugin 'tmhedberg/SimpylFold'            " folding
 
 " Features
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'mbbill/undotree'
+Plugin 'scrooloose/nerdtree'             " file tree split
+Plugin 'jistr/vim-nerdtree-tabs'         " tabs for NERDTree
+Plugin 'ctrlpvim/ctrlp.vim'              " fuzzy finder
+Plugin 'easymotion/vim-easymotion'       " immediate repeated motions
+Plugin 'mbbill/undotree'                 " undo tree
 
 " Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'              " git integration
+Plugin 'airblade/vim-gitgutter'          " show git difference
 
 " LINT
-Plugin 'w0rp/ale'
+Plugin 'w0rp/ale'                        " linter
 
 " Languages
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/deoplete.nvim'            " autocomplete
 
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'    " utils
+Plugin 'tomtom/tlib_vim'                 " utils
+Plugin 'garbas/vim-snipmate'             " snippets
+Plugin 'honza/vim-snippets'              " snippets
 
 " Plugin 'python-mode/python-mode'
-Plugin 'vim-scripts/indentpython.vim'
+Plugin 'vim-scripts/indentpython.vim'    " indentation for python
 
-Plugin 'lervag/vimtex'
+Plugin 'lervag/vimtex'                   " latex support
 
 " Plugin 'neovimhaskell/haskell-vim'
-Plugin 'eagletmt/neco-ghc'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Shougo/vimproc'
-Plugin 'parsonsmatt/intero-neovim'
-Plugin 'alx741/vim-hindent'
-Plugin 'alx741/vim-stylishask'
-Plugin 'dan-t/vim-hsimport'
+Plugin 'eagletmt/neco-ghc'               " haskell autocomplete
+Plugin 'eagletmt/ghcmod-vim'             " ghc-mod integration
+Plugin 'Shougo/vimproc'                  " library
+Plugin 'parsonsmatt/intero-neovim'       " haskell interpreter inside vim
+Plugin 'alx741/vim-hindent'              " indentation for haskell
+Plugin 'alx741/vim-stylishask'           " formatting for haskell
+Plugin 'dan-t/vim-hsimport'              " importing for haskell
 
 " Visual
-Plugin 'junegunn/limelight.vim'
-Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'          " highlight only edited paragraph
+Plugin 'junegunn/goyo.vim'               " distraction free
 
 " Colorschemes
 Plugin 'jnurmine/Zenburn'

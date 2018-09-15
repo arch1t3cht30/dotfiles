@@ -205,5 +205,7 @@ exec --no-startup-id "devmon -nogui"
 exec "polybar example"
 exec --no-startup-id "feh --bg-scale ~/.wallpaper"
 exec --no-startup-id "xset b off"
+exec --no-startup-id "synclient HorizTwoFingerScroll=1"
 exec --no-startup-id "synclient VertScrollDelta=-74"
+exec --no-startup-id "synclient HorizScrollDelta=-74"
 

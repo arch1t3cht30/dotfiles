@@ -24,6 +24,7 @@ Plugin 'terryma/vim-multiple-cursors'    " multiple cursors
 Plugin 'junegunn/fzf.vim'                " fuzzy finder
 Plugin 'lambdalisue/suda.vim'            " sudo write
 Plugin 'tmhedberg/SimpylFold'            " folding
+Plugin 'kana/vim-submode'                " submodes
 
 " Features
 Plugin 'scrooloose/nerdtree'             " file tree split
@@ -214,6 +215,22 @@ nnoremap <leader>w :w suda://%<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>t :split term://bash<CR>
 nnoremap <leader>vt :vsplit term://bash<CR>
+
+" Submode for resizing
+let g:submode_always_show_submode = 1
+let g:submode_timeoutlen = 2000
+call submode#enter_with('window', 'n', '', '<C-M-w>')
+call submode#leave_with('window', 'n', '', '<ESC>')
+
+for key in ['a','b','c','d','e','f','g','h','i','j','k','l','m',
+\           'n','o','p','q','r','s','t','u','v','w','x','y','z']
+    call submode#map('window', 'n', '', key, '<C-w>' . key)
+    call submode#map('window', 'n', '', toupper(key), '<C-w>' . toupper(key))
+    call submode#map('window', 'n', '', '<C-' . key . '>', '<C-w>' . '<C-' . key . '>')
+endfor
+for key in ['=', '_', '+', '-', '<', '>']
+    call submode#map('window', 'n', '', key, '<C-w>' . key)
+endfor
 
 " Commands
 command Vimrc :tabnew ~/.vimrc

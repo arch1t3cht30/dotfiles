@@ -12,5 +12,5 @@ done <<< $(w | grep $(whoami))
 
 xset dpms force off
 
-ln -sf Documents/wallpapers/Wall_$(( ( RANDOM % 2 )  + 1 )).png .wallpaper
+# ln -sf Documents/wallpapers/Wall_$(( ( RANDOM % 2 )  + 1 )).png .wallpaper
 feh --bg-scale ~/.wallpaper

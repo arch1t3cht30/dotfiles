@@ -4,6 +4,7 @@
 .config/i3/config
 .config/nvim/init.vim
 .config/polybar/config
+.config/rofi/config.rasi
 .ghci
 .tmux.conf
 .vim

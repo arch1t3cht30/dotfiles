@@ -26,7 +26,7 @@ def get_list():
         return [s.strip() for s in f.readlines()]
 
 def add_to_list(names):
-    all_names = list(set(names).union(set(get_list())))
+    all_names = sorted(list(set(names).union(set(get_list()))))
 
     with open(FILENAME, "w") as f:
         f.writelines(s + "\n" for s in all_names)

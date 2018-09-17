@@ -6,7 +6,8 @@ nnoremap <Leader>hQ :w<cr>:InteroLoadCurrentFile<cr>:InteroGenericType<cr>
 " nnoremap <Leader>hw :w<cr>:InteroLoadCurrentFile<cr>:InteroTypeInsert<cr>
 nnoremap <Leader>he :w<cr>:GhcModTypeClear<cr>
 
-nnoremap <Leader>hi :InteroOpen<cr>
+nnoremap <Leader>hI :InteroOpen<cr>
+nnoremap <Leader>hi :InteroOpen<cr><C-W>ja
 nnoremap <Leader>hc :InteroHide<cr>
 nnoremap <Leader>hl :w<cr>:InteroLoadCurrentFile<cr>
 nnoremap <Leader>hr :w<cr>:InteroReload<cr>

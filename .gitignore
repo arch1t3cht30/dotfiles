@@ -2,5 +2,5 @@ __pycache__
 .vim/bundle/*
 .vim/undodir/*
 .vim/backup/*
-vim/tmp/*
+.vim/tmp/*
 *.swp

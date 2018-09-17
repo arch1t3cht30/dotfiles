@@ -125,6 +125,7 @@ alias vi="nvim"
 export VISUAL="nvim"
 
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH
 
 eval $(thefuck --alias)
 

@@ -13,6 +13,8 @@ URxvt*.shading: 10
 URxvt.letterSpace: 0
 URxvt.lineSpace: 1
 
+URxvt.fading: 15
+
 URxvt*saveLines:  2000
 xterm*loginShell: true
 xterm*eightBitInput: false

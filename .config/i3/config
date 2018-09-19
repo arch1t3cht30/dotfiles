@@ -191,6 +191,17 @@ mode "resize" {
         bindsym Control+Up resize shrink height 10 px or 10 ppt
         bindsym Control+Right resize grow width 10 px or 10 ppt
 
+        # change focus
+        bindsym $mod+h focus left
+        bindsym $mod+j focus down
+        bindsym $mod+k focus up
+        bindsym $mod+l focus right
+
+        bindsym $mod+Left focus left
+        bindsym $mod+Down focus down
+        bindsym $mod+Up focus up
+        bindsym $mod+Right focus right
+
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"

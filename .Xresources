@@ -15,7 +15,7 @@ URxvt.lineSpace: 1
 
 URxvt.fading: 15
 
-URxvt*saveLines:  2000
+URxvt*saveLines:  50000
 xterm*loginShell: true
 xterm*eightBitInput: false
 xterm*termName: xterm-color

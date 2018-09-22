@@ -290,3 +290,7 @@ exec --no-startup-id "synclient HorizTwoFingerScroll=1"
 exec --no-startup-id "synclient VertScrollDelta=-74"
 exec --no-startup-id "synclient HorizScrollDelta=-74"
 
+# Find the stack path at startup
+exec --no-startup-id "stack path | grep compiler-bin | sed -e 's/compiler-bin: //' > ~/.stackpath"
+# Do thefuck alias at startup
+exec --no-startup-id "thefuck --alias > ~/.thefuckalias"

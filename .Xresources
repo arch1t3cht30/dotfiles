@@ -20,6 +20,9 @@ xterm*loginShell: true
 xterm*eightBitInput: false
 xterm*termName: xterm-color
 
+URxvt.keysym.C-plus:  font-size:increase
+URxvt.keysym.C-minus: font-size:decrease
+
 ! Meta modifier for keybindings
 !URxvt.modifier: super
 

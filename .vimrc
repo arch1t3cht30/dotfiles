@@ -260,7 +260,10 @@ nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr><C-W>j
 
 nnoremap <silent> <leader>aj :lnext<cr>
 nnoremap <silent> <leader>ak :lprev<cr>
-nnoremap <silent> <leader>aq <C-W>k:q<cr>
+nnoremap <silent> <leader>ac <C-W>k:q<cr>
+
+" Don't resize splits after closing others
+set noea
 
 " let g:ale_sign_error = '✘'
 " let g:ale_sign_warning = '⚠'

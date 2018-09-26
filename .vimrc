@@ -314,6 +314,10 @@ autocmd BufNewFile,BufRead *.tex set syntax=context
 autocmd FileType tex let b:surround_101 = "\\begin{equation*}\n    \r\n\\end{equation*}\n"
 autocmd FileType tex let b:surround_36 = "$\n$"
 
+let g:vimtex_view_method = 'zathura'
+let g:tex_flavor = 'latex'
+let g:vimtex_compiler_progname = 'nvr'
+
 nmap yce :<C-U>call <SID>createnv()<CR>
 
 " NERDTree

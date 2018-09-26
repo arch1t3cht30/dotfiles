@@ -5,6 +5,7 @@
 .config/nvim/init.vim
 .config/polybar/config
 .config/rofi/config.rasi
+.config/zathura/zathurarc
 .ghci
 .tmux.conf
 .vim

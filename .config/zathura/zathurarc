@@ -1,0 +1,9 @@
+set guioptions ""
+set default-bg ""
+set recolor-darkcolor "#c0c0c0"
+set recolor-lightcolor "#3c3b3a"
+
+set synctex true
+set synctex-editor-command "nvim +%{line} %{input}"
+
+map <F12> feedkeys ":nohl<Return>" 

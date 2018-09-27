@@ -12,6 +12,7 @@
 .vimrc
 Applications/*.sh
 Applications/hibernate.sh
+Applications/launch_polybar.sh
 Applications/lock.sh
 Applications/suspend.sh
 test

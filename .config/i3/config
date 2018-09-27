@@ -131,6 +131,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+bindsym $mod+m focus output right
+bindsym $mod+n focus output left
+
+bindsym $mod+Shift+m move container to output right
+bindsym $mod+Shift+n move container to output lieft
+
 bindsym $mod+z workspace prev
 bindsym $mod+u workspace prev
 bindsym $mod+o workspace next

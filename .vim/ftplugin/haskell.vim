@@ -11,7 +11,7 @@ nnoremap <Leader>hi :InteroOpen<cr><C-W>ja
 nnoremap <Leader>hc :InteroHide<cr>
 nnoremap <Leader>hl :w<cr>:InteroLoadCurrentFile<cr>
 nnoremap <Leader>hr :w<cr>:InteroReload<cr>
-nnoremap <Leader>hd :IntegroGoToDef
+nnoremap <Leader>hd :InteroGoToDef<cr>
 
 " let g:ghcmod_use_basedir = '$HOME/.local/bin/ghc-mod'
 

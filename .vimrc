@@ -256,7 +256,7 @@ source ~/.vim/physical_moves.vim
 " Plugin configuration
 
 " ALE
-let b:ale_linters = ['pyflakes', 'flake8', 'pylint', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
+let b:ale_linters = ['pyflakes', 'flake8', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
 nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr><C-W>j
 
 nnoremap <silent> <leader>aj :lnext<cr>

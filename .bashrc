@@ -128,12 +128,16 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH
 
 # eval $(thefuck --alias)
-eval $(cat ~/.thefuckalias)
+if [ -f ~/.thefuckalias ]; then
+    eval $(cat ~/.thefuckalias)
+fi
 
 # GHC_PATH=`stack path | grep compiler-bin | sed -e 's/compiler-bin: //'`
 # export PATH="$GHC_PATH:$PATH"
 # export PATH=/home/theo/.stack/programs/x86_64-linux/ghc-tinfo6-8.0.2/bin:$PATH
-export PATH=$(cat ~/.stackpath):$PATH
+if [ -f ~/.stackpath ]; then
+    export PATH=$(cat ~/.stackpath):$PATH
+fi
 
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'

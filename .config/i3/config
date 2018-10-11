@@ -135,7 +135,7 @@ bindsym $mod+m focus output right
 bindsym $mod+n focus output left
 
 bindsym $mod+Shift+m move container to output right
-bindsym $mod+Shift+n move container to output lieft
+bindsym $mod+Shift+n move container to output left
 
 bindsym $mod+z workspace prev
 bindsym $mod+u workspace prev

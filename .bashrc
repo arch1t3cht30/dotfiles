@@ -122,6 +122,8 @@ sps() {
 alias vim="nvim"
 alias vi="nvim"
 
+alias glog="git log --all --oneline --abbrev-commit --graph"
+
 export VISUAL="nvim"
 
 export PATH=$HOME/.local/bin:$PATH

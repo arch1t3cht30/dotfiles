@@ -1,4 +1,3 @@
-.Xdefaults
 .Xresources
 .bashrc
 .config/i3/config

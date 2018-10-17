@@ -123,6 +123,7 @@ alias vim="nvim"
 alias vi="nvim"
 
 alias glog="git log --all --oneline --abbrev-commit --graph"
+alias please="sudo"
 
 export VISUAL="nvim"
 

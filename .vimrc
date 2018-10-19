@@ -18,7 +18,7 @@ Plugin 'vim-airline/vim-airline'         " status line
 Plugin 'tpope/vim-commentary'            " comment code
 Plugin 'tommcdo/vim-lion'                " aligning
 Plugin 'godlygeek/tabular'               " tables
-Plugin 'dhruvasagar/vim-table-mode'      " tables 
+Plugin 'dhruvasagar/vim-table-mode'      " tables
 Plugin 'nathanaelkane/vim-indent-guides' " indent guides
 Plugin 'terryma/vim-multiple-cursors'    " multiple cursors
 Plugin 'junegunn/fzf.vim'                " fuzzy finder
@@ -256,8 +256,9 @@ source ~/.vim/physical_moves.vim
 " Plugin configuration
 
 " ALE
-let b:ale_linters = ['pyflakes', 'flake8', 'stack-ghc', 'ghc-mod', 'hlint', 'hdevtools']
-let b:ale_type_map = {'flake8': {'ES': 'WS'}}
+let g:ale_linters = {'python': ['pyflakes', 'flake8'],
+                   \ 'haskell': ['stack-ghc', 'ghc-mod', 'hlint', 'hdevtools'],}
+let g:ale_type_map = {'flake8': {'ES': 'WS', 'E': 'W'}}
 nnoremap <buffer> <leader>l :call ale#cursor#ShowCursorDetail()<cr><C-W>j
 
 nnoremap <silent> <leader>aj :lnext<cr>

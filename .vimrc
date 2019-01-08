@@ -277,21 +277,6 @@ highlight ALEWarningSign ctermbg=None ctermfg=yellow
 let g:pymode_python = 'python3'
 let g:pymode_rope = 0
 
-" Syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_mode_map = {
-"     \ "mode": "active",
-"     \ "passive_filetypes": ["asm"] }
-" let g:syntastic_quiet_messages = {
-"     \ "regex": ['invalid syntax', 'too complex', 'mccabe'] }
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_chck_on_wq = 0
-
 " Airline
 set laststatus=2
 let g:airline_powerline_fonts = 1

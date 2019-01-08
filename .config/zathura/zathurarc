@@ -6,4 +6,4 @@ set recolor-lightcolor "#3c3b3a"
 set synctex true
 set synctex-editor-command "nvim +%{line} %{input}"
 
-map <F12> feedkeys ":nohl<Return>" 
+map <F12> feedkeys ":nohl<Return>"

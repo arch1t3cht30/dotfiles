@@ -206,6 +206,8 @@ nnoremap yi$ T$yt$
 nnoremap di$ T$dt$
 nnoremap <space> za
 nnoremap <leader>b ,
+nnoremap ä ,
+nnoremap ö %
 map <leader>n :NERDTreeToggle<CR>
 map <leader>u :UndotreeToggle<CR>
 map <F12> :set hls!<CR>

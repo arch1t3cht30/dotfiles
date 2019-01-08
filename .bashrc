@@ -125,6 +125,8 @@ alias vi="nvim"
 alias glog="git log --all --oneline --abbrev-commit --graph"
 alias please="sudo"
 
+alias readbooks="cat ~/booklist | xargs -d '\n' zathura"
+
 export VISUAL="nvim"
 
 export PATH=$HOME/.local/bin:$PATH

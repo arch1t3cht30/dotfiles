@@ -92,7 +92,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+y focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -188,8 +188,8 @@ bindsym $mod+Shift+s+0 rename workspace 1 to temporary; rename workspace 10 to 1
 bindsym Control+Mod1+h exec "~/Applications/hibernate.sh"
 bindsym Control+Mod1+l exec "~/Applications/lock.sh"
 
-bindsym Control+Mod1+k exec "setxkbmap de neo"
-bindsym Control+Mod1+r exec "setxkbmap de"
+bindsym Control+Mod1+k exec "setxkbmap de neo; setxkbmap -option"
+bindsym Control+Mod1+r exec "setxkbmap de; setxkbmap -option caps:escape"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -318,6 +318,7 @@ client.background       #ffffff
 
 exec "setxkbmap de"
 exec --no-startup-id "pulseaudio --start"
+exec --no-startup-id "autocutsel"
 exec --no-startup-id "xbindkeys"
 exec --no-startup-id "devmon -nogui"
 exec "/home/theo/Applications/launch_polybar.sh"

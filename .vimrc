@@ -14,6 +14,7 @@ Plugin 'tpope/vim-unimpaired'            " bracket maps
 Plugin 'tpope/vim-surround'              " manage surrounding brackets
 Plugin 'tpope/vim-eunuch'                " unix command bindings
 Plugin 'tpope/vim-sensible'              " basic settings
+Plugin 'tpope/vim-repeat'                " repeat plugin commands
 Plugin 'vim-airline/vim-airline'         " status line
 Plugin 'tpope/vim-commentary'            " comment code
 Plugin 'tommcdo/vim-lion'                " aligning

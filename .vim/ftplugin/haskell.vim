@@ -1,6 +1,6 @@
 nnoremap <Leader>hs :w<cr>:GhcModSplitFunCase<cr>
 " nnoremap <Leader>hq :w<cr>:GhcModType<cr>
-" nnoremap <Leader>hw :w<cr>:GhcModTypeInsert<cr>
+nnoremap <Leader>hw :w<cr>:GhcModTypeInsert<cr>
 nnoremap <Leader>hq :w<cr>:InteroLoadCurrentFile<cr>:InteroType<cr>
 nnoremap <Leader>hQ :w<cr>:InteroLoadCurrentFile<cr>:InteroGenericType<cr>
 " nnoremap <Leader>hw :w<cr>:InteroLoadCurrentFile<cr>:InteroTypeInsert<cr>

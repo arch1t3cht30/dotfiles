@@ -1,5 +1,6 @@
 .Xresources
 .bashrc
+.config/glava
 .config/i3/config
 .config/nvim/init.vim
 .config/polybar/config

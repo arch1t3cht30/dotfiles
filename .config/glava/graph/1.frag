@@ -84,17 +84,28 @@ float half_w;
 float middle;
 highp float pixel = 1.0F / float(screen.x);
 
-void render_side(in sampler1D tex, float idx) {
+float get_line_height(in sampler1D tex, float idx) {
     float s = smooth_audio_adj(tex, audio_sz, idx / half_w, pixel);
     /* scale the data upwards so we can see it */
     s *= VSCALE;
     /* clamp far ends of the screen down to make the ends of the graph smoother */
-    /* s *= clamp((abs((screen.x / 2) - gl_FragCoord.x) / screen.x) * 48, 0.0F, 1.0F); */
 
     float fact = clamp((abs((screen.x / 2) - gl_FragCoord.x) / screen.x) * 48, 0.0F, 1.0F);
+    #if JOIN_CHANNELS > 0
+    // fact = pow(fact, 1.8);  /* To avoid spikes */
+    fact = -2 * pow(fact, 3) + 3 * pow(fact, 2);    /* To avoid spikes */
     s = fact * s + (1 - fact) * middle;
+    #else
+    s *= fact;
+    #endif
 
     s *= clamp((min(gl_FragCoord.x, screen.x - gl_FragCoord.x) / screen.x) * 48, 0.0F, 1.0F);
+
+    return s;
+}
+
+void render_side(in sampler1D tex, float idx) {
+    float s = get_line_height(tex, idx);
 
     /* and finally set fragment color if we are in range */
     #if INVERT > 0
@@ -105,12 +116,20 @@ void render_side(in sampler1D tex, float idx) {
     if (pos + 1.5 <= s) {
         fragment = COLOR;
 
-        /* CUSTOM smoothing */
+        /* cubic vertical aliasing */
+        // float d = s - (pos + 1.5);
+        // float sp1 = get_line_height(tex, idx + 1);
+        // float sm1 = get_line_height(tex, idx - 1);
 
-        float d = s - (pos + 1.5);
-        if (d <= 3) {
-            fragment.a *= d / 3.0;
-        }
+        // float delta = abs(sp1 - s);
+        // float delta2 = abs(abs(sp1 - s) - abs(s - sm1));
+
+        // float s_deg = SMOOTH_DEGREE * (1 + clamp(delta * 0.5 - delta2, 0, 10));
+
+        // if (d <= s_deg) {
+        //     float r = d / s_deg;
+        //     fragment.a *= -2 * pow(r, 3) + 3 * pow(r, 2);
+        // }
 
     } else {
         fragment = vec4(0, 0, 0, 0);
@@ -119,7 +138,7 @@ void render_side(in sampler1D tex, float idx) {
 
 void main() {
     half_w = (screen.x / 2);
-    
+
     middle = VSCALE * (smooth_audio_adj(audio_l, audio_sz, 1, pixel) + smooth_audio_adj(audio_r, audio_sz, 0, pixel)) / 2;
 
     if (gl_FragCoord.x < half_w) {

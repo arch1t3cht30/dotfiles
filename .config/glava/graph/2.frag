@@ -24,7 +24,7 @@ void main() {
         a7 = texelFetch(tex, ivec2((gl_FragCoord.x - 1), (gl_FragCoord.y - 0)), 0);
 
     vec4 avg = (a0 + a1 + a2 + a3 + a4 + a5 + a6 + a7) / 8.0;
-    vec4 totalavg = (fragment + a0 + a1 + a2 + a3 + a4 + a5 + a6 + a7) / 9.0;
+    // vec4 totalavg = (fragment + a0 + a1 + a2 + a3 + a4 + a5 + a6 + a7) / 9.0;
     if (avg.a > 0){
         if (fragment.a <= 0) {
             /* outline */
@@ -36,7 +36,7 @@ void main() {
             #if DRAW_HIGHLIGHT > 0
             fragment.rgb *= avg.a * 2;
             #else
-            fragment.a = 0.6 * fragment.a + 0.4 * totalavg.a;
+            // fragment.a = 0.6 * fragment.a + 0.4 * totalavg.a;
             #endif
         }
     }

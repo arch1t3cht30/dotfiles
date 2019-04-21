@@ -11,11 +11,11 @@ Plug 'tpope/vim-repeat'                  " repeat plugin commands
 Plug 'vim-airline/vim-airline'           " status line
 Plug 'tpope/vim-commentary'              " comment code
 Plug 'tommcdo/vim-lion'                  " aligning
-Plug 'godlygeek/tabular'                 " tables
-Plug 'dhruvasagar/vim-table-mode'        " tables
-Plug 'nathanaelkane/vim-indent-guides'   " indent guides
+" Plug 'godlygeek/tabular'                 " tables
+" Plug 'dhruvasagar/vim-table-mode'        " tables
+" Plug 'nathanaelkane/vim-indent-guides'   " indent guides
 Plug 'terryma/vim-multiple-cursors'      " multiple cursors
-Plug 'junegunn/fzf.vim'                  " fuzzy finder
+" Plug 'junegunn/fzf.vim'                  " fuzzy finder
 Plug 'lambdalisue/suda.vim'              " sudo write
 Plug 'tmhedberg/SimpylFold'              " folding
 Plug 'kana/vim-submode'                  " submodes
@@ -23,7 +23,7 @@ Plug 'kana/vim-submode'                  " submodes
 " Features
 Plug 'scrooloose/nerdtree'               " file tree split
 Plug 'jistr/vim-nerdtree-tabs'           " tabs for NERDTree
-Plug 'ctrlpvim/ctrlp.vim'                " fuzzy finder
+" Plug 'ctrlpvim/ctrlp.vim'                " fuzzy finder
 Plug 'easymotion/vim-easymotion'         " immediate repeated motions
 Plug 'mbbill/undotree'                   " undo tree
 
@@ -75,7 +75,7 @@ Plug 'flazz/vim-colorschemes'
 
 " Nice colorschemes:
 " gruvbox/deus, hybrid, hybrid_material, afterglow, angr, apprentice, pencil,
-" badwolf
+" badwolf, OceanicNext
 
 call plug#end()
 
@@ -202,8 +202,6 @@ nnoremap ö %
 map <leader>n :NERDTreeToggle<CR>
 map <leader>u :UndotreeToggle<CR>
 map <F12> :set hls!<CR>
-" map <F8> :PymodeLint<CR>
-" map <F9> :PymodeLintAuto<CR>
 
 nnoremap <leader>w :w suda://%<CR>
 tnoremap <Esc> <C-\><C-n>
@@ -266,18 +264,14 @@ set noea
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=None ctermfg=yellow
 
-" Pymode
-let g:pymode_python = 'python3'
-let g:pymode_rope = 0
-
 " Airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
 
 " Indent Guides
-let g:indent_guides_guide_size = 1
-let g:indent_guides_color_change_percent = 3
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_color_change_percent = 3
 " let g:indent_guides_enable_on_vim_startup = 1
 
 " Solarized

@@ -105,20 +105,6 @@ nnoremap <Right> <NOP>
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 
-" Functions
-
-function! s:createnv()
-    call inputsave()
-    let l:new_env = input('New environment: ')
-    call inputrestore()
-
-    if empty(l:new_env) | return | endif
-
-    execute "normal! o\\begin{" . l:new_env . "}\<CR>\\end{" . l:new_env . "}\<ESC>"
-    call feedkeys ('O', 'n')
-
-endfunction
-
 " General options
 
 set encoding=utf-8
@@ -238,6 +224,14 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 
+" Snippets
+let g:UltiSnipsExpandTrigger       = '<tab>'
+let g:UltiSnipsJumpForwardTrigger  = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+" let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips']
+let g:UltiSnipsEditSplit           = 'tabdo'
+
 " Commands
 command Vimrc :tabnew ~/.vimrc
 
@@ -292,8 +286,6 @@ autocmd FileType tex let b:surround_36 = "$\n$"
 let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_progname = 'nvr'
-
-nmap yce :<C-U>call <SID>createnv()<CR>
 
 " NERDTree
 

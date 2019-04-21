@@ -19,13 +19,18 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #1c1b1a
-background-alt = #444
+; background-alt = #404040
+background-alt = #1c1b1a
 ;foreground = ${xrdb:color7:#222}
 foreground = #bababa
-foreground-alt = #555
-primary = #ffb52a
+foreground-alt = #505050
+; primary = #ffb52a
+; primary = #0095d9
+primary = #196dc1
 secondary = #e60053
 alert = #bd2c40
+; purple = #9f78e1
+purple = #7684e0
 
 [bar/example]
 monitor = ${env:MONITOR:}
@@ -46,7 +51,7 @@ border-size = 4
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
 module-margin-right = 2
@@ -158,6 +163,8 @@ label-mode-background = ${colors.primary}
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
+;ulabel-focused-underline = ${module/bspwm.label-focused-background}
+;label-focused-foreground = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
@@ -204,7 +211,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = ${colors.purple}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -236,7 +243,8 @@ interface = wlp1s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+; format-connected-underline = #9f78e1
+format-connected-underline = ${colors.purple}
 label-connected = %essid%
 
 format-disconnected =

@@ -1,93 +1,83 @@
-" Start of Vundle initialization
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " Start of Vundle Plugin initialization
 
-Plugin 'VundleVim/Vundle.vim'
-
 " Basic
-Plugin 'tpope/vim-unimpaired'            " bracket maps
-Plugin 'tpope/vim-surround'              " manage surrounding brackets
-Plugin 'tpope/vim-eunuch'                " unix command bindings
-Plugin 'tpope/vim-sensible'              " basic settings
-Plugin 'tpope/vim-repeat'                " repeat plugin commands
-Plugin 'vim-airline/vim-airline'         " status line
-Plugin 'tpope/vim-commentary'            " comment code
-Plugin 'tommcdo/vim-lion'                " aligning
-Plugin 'godlygeek/tabular'               " tables
-Plugin 'dhruvasagar/vim-table-mode'      " tables
-Plugin 'nathanaelkane/vim-indent-guides' " indent guides
-Plugin 'terryma/vim-multiple-cursors'    " multiple cursors
-Plugin 'junegunn/fzf.vim'                " fuzzy finder
-Plugin 'lambdalisue/suda.vim'            " sudo write
-Plugin 'tmhedberg/SimpylFold'            " folding
-Plugin 'kana/vim-submode'                " submodes
+Plug 'tpope/vim-unimpaired'              " bracket maps
+Plug 'tpope/vim-surround'                " manage surrounding brackets
+Plug 'tpope/vim-eunuch'                  " unix command bindings
+Plug 'tpope/vim-sensible'                " basic settings
+Plug 'tpope/vim-repeat'                  " repeat plugin commands
+Plug 'vim-airline/vim-airline'           " status line
+Plug 'tpope/vim-commentary'              " comment code
+Plug 'tommcdo/vim-lion'                  " aligning
+Plug 'godlygeek/tabular'                 " tables
+Plug 'dhruvasagar/vim-table-mode'        " tables
+Plug 'nathanaelkane/vim-indent-guides'   " indent guides
+Plug 'terryma/vim-multiple-cursors'      " multiple cursors
+Plug 'junegunn/fzf.vim'                  " fuzzy finder
+Plug 'lambdalisue/suda.vim'              " sudo write
+Plug 'tmhedberg/SimpylFold'              " folding
+Plug 'kana/vim-submode'                  " submodes
 
 " Features
-Plugin 'scrooloose/nerdtree'             " file tree split
-Plugin 'jistr/vim-nerdtree-tabs'         " tabs for NERDTree
-Plugin 'ctrlpvim/ctrlp.vim'              " fuzzy finder
-Plugin 'easymotion/vim-easymotion'       " immediate repeated motions
-Plugin 'mbbill/undotree'                 " undo tree
+Plug 'scrooloose/nerdtree'               " file tree split
+Plug 'jistr/vim-nerdtree-tabs'           " tabs for NERDTree
+Plug 'ctrlpvim/ctrlp.vim'                " fuzzy finder
+Plug 'easymotion/vim-easymotion'         " immediate repeated motions
+Plug 'mbbill/undotree'                   " undo tree
 
 " Git
-Plugin 'tpope/vim-fugitive'              " git integration
-Plugin 'airblade/vim-gitgutter'          " show git difference
+Plug 'tpope/vim-fugitive'                " git integration
+Plug 'airblade/vim-gitgutter'            " show git difference
 
 " LINT
-Plugin 'w0rp/ale'                        " linter
+Plug 'w0rp/ale'                          " linter
 
 " Languages
 " Plugin 'Valloric/YouCompleteMe'
-Plugin 'Shougo/deoplete.nvim'            " autocomplete
+Plug 'Shougo/deoplete.nvim'              " autocomplete
 
-Plugin 'MarcWeber/vim-addon-mw-utils'    " utils
-Plugin 'tomtom/tlib_vim'                 " utils
-Plugin 'garbas/vim-snipmate'             " snippets
-Plugin 'honza/vim-snippets'              " snippets
+Plug 'MarcWeber/vim-addon-mw-utils'      " utils
+Plug 'tomtom/tlib_vim'                   " utils
+Plug 'sirver/ultisnips'                  " snippets
 
 " Plugin 'python-mode/python-mode'
-Plugin 'vim-scripts/indentpython.vim'    " indentation for python
+Plug 'vim-scripts/indentpython.vim'      " indentation for python
 
-Plugin 'lervag/vimtex'                   " latex support
+Plug 'lervag/vimtex'                     " latex support
 
 " Plugin 'neovimhaskell/haskell-vim'
-Plugin 'eagletmt/neco-ghc'               " haskell autocomplete
-Plugin 'eagletmt/ghcmod-vim'             " ghc-mod integration
-Plugin 'Shougo/vimproc'                  " library
-Plugin 'parsonsmatt/intero-neovim'       " haskell interpreter inside vim
-Plugin 'alx741/vim-hindent'              " indentation for haskell
-Plugin 'alx741/vim-stylishask'           " formatting for haskell
-Plugin 'dan-t/vim-hsimport'              " importing for haskell
+Plug 'eagletmt/neco-ghc'                 " haskell autocomplete
+Plug 'eagletmt/ghcmod-vim'               " ghc-mod integration
+Plug 'Shougo/vimproc'                    " library
+Plug 'parsonsmatt/intero-neovim'         " haskell interpreter inside vim
+Plug 'alx741/vim-hindent'                " indentation for haskell
+Plug 'alx741/vim-stylishask'             " formatting for haskell
+Plug 'dan-t/vim-hsimport'                " importing for haskell
 
 " Visual
-Plugin 'junegunn/limelight.vim'          " highlight only edited paragraph
-Plugin 'junegunn/goyo.vim'               " distraction free
+Plug 'junegunn/limelight.vim'            " highlight only edited paragraph
+Plug 'junegunn/goyo.vim'                 " distraction free
 
 " Colorschemes
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'sickill/vim-monokai'
-Plugin 'morhetz/gruvbox'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'sjl/badwolf'
-Plugin 'reedes/vim-colors-pencil'
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
+Plug 'w0ng/vim-hybrid'
+Plug 'sickill/vim-monokai'
+Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'sjl/badwolf'
+Plug 'reedes/vim-colors-pencil'
 
-Plugin 'rafi/awesome-vim-colorschemes'
-Plugin 'flazz/vim-colorschemes'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
 " Nice colorschemes:
 " gruvbox/deus, hybrid, hybrid_material, afterglow, angr, apprentice, pencil,
 " badwolf
 
-" End of Vundle Plugin initialization
-"
-call vundle#end()
+call plug#end()
 
 " OS specific
 if has("unix")

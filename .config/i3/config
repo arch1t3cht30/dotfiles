@@ -188,6 +188,8 @@ bindsym $mod+Shift+s+0 rename workspace 1 to temporary; rename workspace 10 to 1
 bindsym Control+Mod1+h exec "~/Applications/hibernate.sh"
 bindsym Control+Mod1+l exec "~/Applications/lock.sh"
 
+bindsym Control+Mod1+s exec "~/Applications/playsound.sh"
+
 bindsym Control+Mod1+k exec "setxkbmap de neo; setxkbmap -option"
 bindsym Control+Mod1+r exec "setxkbmap de; setxkbmap -option caps:escape"
 
@@ -302,7 +304,8 @@ mode "$mode_gaps_outer" {
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #0a2b44 #2a4763 #dddddd #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+# client.focused_inactive #333333 #5f676a #eeeeee #484e50   #5f676a
+client.focused_inactive #333333 #4f5659 #dadada #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
@@ -317,11 +320,10 @@ client.background       #ffffff
 
 
 exec "setxkbmap de"
-exec --no-startup-id "pulseaudio --start"
+exec --no-startup-id "pulseaudio --kill & pulseaudio --start & /home/theo/Applications/launch_polybar.sh"
 exec --no-startup-id "autocutsel"
 exec --no-startup-id "xbindkeys"
 exec --no-startup-id "devmon -nogui"
-exec "/home/theo/Applications/launch_polybar.sh"
 exec --no-startup-id "feh --bg-scale ~/.wallpaper"
 exec --no-startup-id "xset b off"
 exec --no-startup-id "synclient HorizTwoFingerScroll=1"

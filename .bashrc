@@ -126,11 +126,15 @@ alias glog="git log --all --oneline --abbrev-commit --graph"
 alias please="sudo"
 
 alias readbooks="cat ~/booklist | xargs -d '\n' zathura"
+alias headphones="echo connect 5A:5A:5A:5B:00:C8 | bluetoothctl"
+alias doproxy="source ~/Applications/hhgymproxy.sh"
+alias sshpi="ssh -o ProxyCommand='/usr/bin/nc -X connect -x 10.16.1.1:8080 %h %p' -p 443 theo@arch1t3cht30.ddns.net"
 
 export VISUAL="nvim"
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.gem/ruby/2.5.0/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 
 # eval $(thefuck --alias)
 if [ -f ~/.thefuckalias ]; then

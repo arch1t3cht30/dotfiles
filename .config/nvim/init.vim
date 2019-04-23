@@ -278,7 +278,7 @@ else
 endif
 
 " TeX file configuration
-autocmd BufNewFile,BufRead *.tex set syntax=context
+" autocmd BufNewFile,BufRead *.tex set syntax=context
 autocmd FileType tex let b:surround_101 = "\\begin{equation*}\n    \r\n\\end{equation*}\n"
 autocmd FileType tex let b:surround_36 = "$\n$"
 

@@ -67,9 +67,10 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'sjl/badwolf'
 Plug 'reedes/vim-colors-pencil'
+Plug 'arcticicestudio/nord-vim'
 
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'flazz/vim-colorschemes'
+" Plug 'rafi/awesome-vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
 
 " Nice colorschemes:
 " gruvbox/deus, hybrid, hybrid_material, afterglow, angr, apprentice, pencil,

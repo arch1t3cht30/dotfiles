@@ -6,6 +6,7 @@
 .config/polybar/config
 .config/rofi/config.rasi
 .config/zathura/zathurarc
+.dircolors
 .ghci
 .profile
 .tmux.conf

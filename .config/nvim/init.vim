@@ -273,7 +273,7 @@ if has('gui_running')
     colorscheme solarized
 else
     " colorscheme gruvbox
-    colorscheme badwolf
+    colorscheme nord
     set background=dark
 endif
 

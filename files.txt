@@ -2,7 +2,7 @@
 .bashrc
 .config/glava
 .config/i3/config
-.config/nvim/init.vim
+.config/nvim/
 .config/polybar/config
 .config/rofi/config.rasi
 .config/zathura/zathurarc

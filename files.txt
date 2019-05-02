@@ -8,6 +8,7 @@
 .config/zathura/zathurarc
 .dircolors
 .ghci
+.latexlibs
 .profile
 .tmux.conf
 .vim

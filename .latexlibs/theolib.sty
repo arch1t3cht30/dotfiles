@@ -1,0 +1,87 @@
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pgfplots}
+\usepackage{bbm}
+\usepackage{booktabs}
+
+% Creating \abs and \norm commands
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\inner{\langle}{\rangle}
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+
+\let\oldfloor\floor
+\def\floor{\@ifstar{\oldfloor}{\oldfloor*}}
+
+\let\oldceil\ceil
+\def\ceil{\@ifstar{\oldceil}{\oldceil*}}
+
+\let\oldinner\inner
+\def\inner{\@ifstar{\oldinner}{\oldinner*}}
+\makeatother
+
+\DeclareMathOperator{\id}{\mathbf\mathnormal{id}}
+\DeclareMathOperator{\rang}{rang}
+\DeclareMathOperator{\im}{im}
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Bild}{Bild}
+\DeclareMathOperator{\Kern}{Kern}
+\DeclareMathOperator{\Rg}{Rg}
+\DeclareMathOperator{\Def}{Def}
+\DeclareMathOperator{\Loes}{\text{Lös}}
+\DeclareMathOperator{\Var}{\text{Var}}
+\DeclareMathOperator{\Cov}{\text{Cov}}
+
+% Creating commands for left tags in equations
+\newcommand{\ali}[1]{\refstepcounter{equation}\tag*{\llap{\makebox[\linewidth][l]{$#1$}}}}
+\newcommand{\al}[1]{\tag*{\llap{\makebox[\linewidth][l]{$#1$}}}}
+\newcommand{\alri}[2]{\ali{#1\hfill#2}}
+\newcommand{\alr}[2]{\al{#1\hfill#2}}
+\newcommand{\ioi}{\al{\Leftrightarrow}}
+\newcommand{\then}{\al{\Rightarrow}}
+\newcommand{\ioiqed}{\alr{\Leftrightarrow}{\qedsymbol}}
+\newcommand{\thenqed}{\alr{\Rightarrow}{\qedsymbol}}
+
+% Short forms for segments and segment lengths
+\newcommand{\seg}[1]{\overline{#1}}
+\newcommand{\segl}[1]{\abs{\seg{#1}}}
+
+% Short forms for reals and naturals
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+
+\newcommand{\D}{\mathop{}\mathrm{d}}
+\newcommand{\dist}{\mathop{}\mathrm{d}}
+
+\newcommand{\heading}[1]{\\[12pt]\large{\textbf{#1}}\\[8pt]\normalsize}
+
+\newcommand{\twovec}[2]{\begin{pmatrix}#1\\#2\end{pmatrix}}
+\newcommand{\trivec}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+
+\newcommand{\corr}{\ \widehat{=}\ }
+
+% Section title format
+%\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{Aufgabe \thesection\normalfont\ (#1)}
+
+% Subsection title format
+%\renewcommand{\thesubsection}{\alph{subsection}}
+%\titleformat{\subsection}{\normalfont\large\bfseries}{}{0em}{Teil (\thesubsection)\ #1}
+

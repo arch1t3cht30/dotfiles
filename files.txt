@@ -11,8 +11,6 @@
 .latexlibs
 .profile
 .tmux.conf
-.vim
-.vimrc
 Applications/hibernate.sh
 Applications/launch_polybar.sh
 Applications/lock.sh

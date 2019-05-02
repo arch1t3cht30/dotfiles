@@ -17,6 +17,7 @@ Plug 'terryma/vim-multiple-cursors'      " multiple cursors
 Plug 'lambdalisue/suda.vim'              " sudo write
 Plug 'tmhedberg/SimpylFold'              " folding
 Plug 'kana/vim-submode'                  " submodes
+Plug 'tsiemens/vim-aftercolors'          " allow overriding colorschemes
 
 " Features
 Plug 'scrooloose/nerdtree'               " file tree split
@@ -285,6 +286,9 @@ autocmd FileType tex let b:surround_36 = "$\n$"
 let g:vimtex_view_method = 'zathura'
 let g:tex_flavor = 'latex'
 let g:vimtex_compiler_progname = 'nvr'
+
+set conceallevel=1
+let g:tex_conceal = 'abdmg'
 
 " NERDTree
 

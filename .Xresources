@@ -135,7 +135,7 @@ URxvt.iso14755_52: false
 *.foreground:   nord4
 *.background:   nord0
 *.cursorColor:  nord4
-*fading: 15
+*fading: 5
 *fadeColor: nord3
 
 *.color0: nord1

@@ -80,9 +80,9 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3 users
+modules-left = i3 users
 modules-center =
-modules-right = filesystem fs_home xbacklight pulseaudio xkeyboard memory cpu wlan eth battery date powermenu
+modules-right = filesystem fs_home xbacklight pulseaudio xkeyboard memory cpu wlan battery date powermenu
 
 tray-position = right
 tray-padding = 2

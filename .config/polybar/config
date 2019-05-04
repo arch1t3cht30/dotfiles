@@ -17,20 +17,40 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #1c1b1a
-; background-alt = #404040
-background-alt = #1c1b1a
-;foreground = ${xrdb:color7:#222}
-foreground = #bababa
-foreground-alt = #505050
-; primary = #ffb52a
-; primary = #0095d9
-primary = #196dc1
-secondary = #e60053
-alert = #bd2c40
-; purple = #9f78e1
-purple = #7684e0
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
+
+background = ${colors.nord0}
+background-alt = ${colors.nord1}
+
+foreground = ${colors.nord4}
+foreground-alt = ${colors.nord8}
+foreground-alt2 = ${colors.nord9}
+
+primary = ${colors.nord8}
+secondary = ${colors.nord7}
+
+alert = ${colors.nord12}
+red = ${colors.nord11}
+orange = ${colors.nord12}
+yellow = ${colors.nord13}
+green = ${colors.nord14}
+blue = ${colors.nord10}
+purple = ${colors.nord15}
 
 [bar/example]
 monitor = ${env:MONITOR:}
@@ -47,8 +67,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
-border-color = #00000000
+border-size = 0
+border-color = ${colors.background-alt}
 
 padding-left = 0
 padding-right = 0
@@ -96,7 +116,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout-underline = ${colors.blue}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -109,7 +129,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#88C0D0}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -119,7 +139,7 @@ interval = 25
 
 mount-0 = /home
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#88C0D0}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -156,7 +176,7 @@ wrapping-scroll = false
 pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
+label-mode-foreground = ${colors.background}
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
@@ -207,14 +227,14 @@ label = BL
 
 bar-width = 10
 bar-indicator = |
-bar-indicator-foreground = #fff
+bar-indicator-foreground = ${colors.foreground}
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = ${colors.purple}
+bar-fill-foreground = ${colors.yellow}
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+bar-empty-foreground = ${colors.orange}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -227,7 +247,7 @@ interval = 2
 ; format-prefix = "CPU: "
 format-prefix = "CPU: "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.foreground-alt2}
 label = %percentage:2%%
 
 [module/memory]
@@ -236,7 +256,7 @@ interval = 2
 ; format-prefix = "RAM: "
 format-prefix = "RAM: "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = ${colors.foreground-alt2}
 label = %percentage_used%%
 
 [module/wlan]
@@ -245,7 +265,6 @@ interface = wlp1s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-; format-connected-underline = #9f78e1
 format-connected-underline = ${colors.purple}
 label-connected = %essid%
 
@@ -290,7 +309,7 @@ time-alt = %H:%M:%S
 
 ;format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.nord9}
 
 label = %date% %time%
 
@@ -302,16 +321,16 @@ label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted-foreground = ${colors.foreground-alt2}
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.green}
+bar-volume-foreground-1 = ${colors.green}
+bar-volume-foreground-2 = ${colors.green}
+bar-volume-foreground-3 = ${colors.green}
+bar-volume-foreground-4 = ${colors.green}
+bar-volume-foreground-5 = ${colors.yellow}
+bar-volume-foreground-6 = ${colors.red}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -356,7 +375,7 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.yellow}
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -443,7 +462,7 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini

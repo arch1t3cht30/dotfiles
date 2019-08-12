@@ -119,13 +119,25 @@ sps() {
 
 # bind -m vi-insert "\C-l":clear-screen
 
+readbooks () {
+    while IFS= read -r f ; do
+        if [[ -z $f ]] ; then
+            sleep 0.5
+            i3-msg focus parent
+            i3-msg focus right
+        else
+            zathura "$f" &
+        fi
+    done < ~/booklist
+    exit
+}
+
 alias vim="nvim"
 alias vi="nvim"
 
 alias glog="git log --all --oneline --abbrev-commit --graph"
 alias please="sudo"
 
-alias readbooks="cat ~/booklist | xargs -d '\n' zathura"
 alias headphones="echo connect 5A:5A:5A:5B:00:C8 | bluetoothctl"
 alias doproxy="source ~/Applications/hhgymproxy.sh"
 alias sshpi="ssh -o ProxyCommand='/usr/bin/nc -X connect -x 10.16.1.1:8080 %h %p' -p 443 theo@arch1t3cht30.ddns.net"

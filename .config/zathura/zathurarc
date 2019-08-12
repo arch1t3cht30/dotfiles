@@ -3,7 +3,12 @@ set default-bg ""
 set recolor-darkcolor "#c0c0c0"
 set recolor-lightcolor "#3c3b3a"
 
+set window-title-basename true
+set window-title-home-tilde true
+
 set synctex true
 set synctex-editor-command "nvim +%{line} %{input}"
+
+set smooth-scroll true
 
 map <F12> feedkeys ":nohl<Return>"

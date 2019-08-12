@@ -67,8 +67,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 0
-border-color = ${colors.background-alt}
+border-bottom-size = 4
+border-color = ${colors.background}
 
 padding-left = 0
 padding-right = 0
@@ -82,7 +82,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 users
 modules-center =
-modules-right = filesystem fs_home xbacklight pulseaudio xkeyboard memory cpu wlan battery date powermenu
+modules-right = spotify spacer filesystem fs_home xbacklight pulseaudio xkeyboard memory cpu wlan battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -235,6 +235,19 @@ bar-fill-foreground = ${colors.yellow}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.orange}
+
+[module/spotify]
+type = custom/script
+interval = .1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/spotify.py -f '{artist} - {song}'
+format-underline = ${colors.blue}
+click-left = "playerctl play-pause"
+
+[module/spacer]
+type = custom/text
+content = "       "
 
 [module/backlight-acpi]
 inherit = module/xbacklight
@@ -451,7 +464,7 @@ menu-2-1-exec = menu-open-0
 
 [module/users]
 type = custom/script
-exec = users
+exec = who | grep -v tmux | awk '{printf "%s %s\n", $1, $5}' | perl -F'\n' -0777 -anE 'say join "  |  ", @F'
 interval = 1
 
 [settings]

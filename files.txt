@@ -14,4 +14,7 @@
 Applications/hibernate.sh
 Applications/launch_polybar.sh
 Applications/lock.sh
+Applications/parestart.sh
+Applications/playsound.sh
+Applications/shutdown.sh
 Applications/suspend.sh

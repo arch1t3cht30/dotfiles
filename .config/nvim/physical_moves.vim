@@ -1,22 +1,22 @@
-nnoremap <buffer> <silent> k gk
-nnoremap <buffer> <silent> j gj
-nnoremap <buffer> <silent> 0 g0
-nnoremap <buffer> <silent> $ g$
+nnoremap <silent> k gk
+nnoremap <silent> j gj
+nnoremap <silent> 0 g0
+nnoremap <silent> $ g$
 
-nnoremap <buffer> <silent> gk k
-nnoremap <buffer> <silent> gj j
-nnoremap <buffer> <silent> g0 0
-nnoremap <buffer> <silent> g0 0
+nnoremap <silent> gk k
+nnoremap <silent> gj j
+nnoremap <silent> g0 0
+nnoremap <silent> g0 0
 
-vnoremap <buffer> <silent> k gk
-vnoremap <buffer> <silent> j gj
-vnoremap <buffer> <silent> 0 g0
-vnoremap <buffer> <silent> $ g$
+vnoremap <silent> k gk
+vnoremap <silent> j gj
+vnoremap <silent> 0 g0
+vnoremap <silent> $ g$
 
-vnoremap <buffer> <silent> gk k
-vnoremap <buffer> <silent> gj j
-vnoremap <buffer> <silent> g0 0
-vnoremap <buffer> <silent> g0 0
+vnoremap <silent> gk k
+vnoremap <silent> gj j
+vnoremap <silent> g0 0
+vnoremap <silent> g0 0
 
 " function! NoremapNormalCmd(key, preserve_omni, ...)
 "   let cmd = ''

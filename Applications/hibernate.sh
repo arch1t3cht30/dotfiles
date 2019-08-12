@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
-~/Applications/lock.sh ; systemctl hibernate
+set -e
+
+~/Applications/lock.sh ; systemctl hibernate || killall i3lock

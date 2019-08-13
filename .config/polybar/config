@@ -82,7 +82,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 users
 modules-center =
-modules-right = spotify spacer filesystem fs_home xbacklight pulseaudio xkeyboard memory cpu wlan battery date powermenu
+modules-right = spotify spacer filesystem fs_home pulseaudio xbacklight xkeyboard memory cpu wlan battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -222,19 +222,23 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = BL
+format = <label> <ramp>
+label = LIGHT
 
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = ${colors.foreground}
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = ${colors.yellow}
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.orange}
+ramp-0 = 🌕
+ramp-1 = 🌕
+ramp-2 = 🌕
+ramp-3 = 🌔
+ramp-4 = 🌔
+ramp-5 = 🌔
+ramp-6 = 🌓
+ramp-7 = 🌓
+ramp-8 = 🌓
+ramp-9 = 🌒
+ramp-10 = 🌒
+ramp-11 = 🌒
+ramp-12 = 🌑
+ramp-foreground = ${colors.foreground-alt2}
 
 [module/spotify]
 type = custom/script
@@ -242,7 +246,7 @@ interval = .1
 format-prefix = " "
 format = <label>
 exec = python ~/.config/polybar/spotify.py -f '{artist} - {song}'
-format-underline = ${colors.blue}
+format-underline = ${colors.nord9}
 click-left = "playerctl play-pause"
 
 [module/spacer]

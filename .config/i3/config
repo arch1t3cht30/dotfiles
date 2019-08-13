@@ -345,6 +345,8 @@ client.background       $n0
 exec "setxkbmap de"
 exec --no-startup-id "pulseaudio --kill && pulseaudio --start && /home/theo/Applications/launch_polybar.sh"
 exec --no-startup-id "autocutsel"
+exec --no-startup-id "dunst"
+exec --no-startup-id "/home/theo/Applications/system-state-listener.py"
 exec --no-startup-id "xbindkeys"
 exec --no-startup-id "devmon -nogui"
 exec --no-startup-id "feh --no-fehbg --bg-scale ~/.wallpaper"

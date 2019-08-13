@@ -82,3 +82,8 @@ URxvt.iso14755_52: false
 *.color13: nord15
 *.color14: nord7
 *.color15: nord6
+
+notifications-color-bar-filled: nord4
+notifications-color-bar-empty:  nord3
+notifications-color-muted:  #C0C5CE
+

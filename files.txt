@@ -1,5 +1,6 @@
 .Xresources
 .bashrc
+.config/dunst/dunstrc
 .config/glava
 .config/i3/config
 .config/nvim/
@@ -11,6 +12,7 @@
 .latexlibs
 .profile
 .tmux.conf
+Applications/getXresources.py
 Applications/hibernate.sh
 Applications/launch_polybar.sh
 Applications/lock.sh
@@ -18,3 +20,4 @@ Applications/parestart.sh
 Applications/playsound.sh
 Applications/shutdown.sh
 Applications/suspend.sh
+Applications/system-state-listener.py

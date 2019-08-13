@@ -36,84 +36,12 @@ URxvt.url-select.button:    2
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
 
-! Nastavuje kopirovani
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 
 ! disable the stupid ctrl+shift 'feature'
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-
-!urxvt color scheme:
-
-! URxvt*background: #2B2B2B
-! URxvt*foreground: #DEDEDE
-! 
-! URxvt*colorUL: #86a2b0
-! 
-! ! black
-! URxvt*color0  : #2E3436
-! URxvt*color8  : #555753
-! ! red
-! URxvt*color1  : #CC0000
-! URxvt*color9  : #EF2929
-! ! green
-! URxvt*color2  : #4E9A06
-! URxvt*color10 : #8AE234
-! ! yellow
-! URxvt*color3  : #C4A000
-! URxvt*color11 : #FCE94F
-! ! blue
-! URxvt*color4  : #3465A4
-! URxvt*color12 : #729FCF
-! ! magenta
-! URxvt*color5  : #75507B
-! URxvt*color13 : #AD7FA8
-! ! cyan
-! URxvt*color6  : #06989A
-! URxvt*color14 : #34E2E2
-! ! white
-! URxvt*color7  : #D3D7CF
-! URxvt*color15 : #EEEEEC
-
-
-
-! ! special
-! *.foreground:   #c5c8c6
-! *.background:   #1d1f21
-! *.cursorColor:  #c5c8c6
-!
-! ! black
-! *.color0:       #282a2e
-! *.color8:       #373b41
-!
-! ! red
-! *.color1:       #a54242
-! *.color9:       #cc6666
-!
-! ! green
-! *.color2:       #8c9440
-! *.color10:      #b5bd68
-!
-! ! yellow
-! *.color3:       #de935f
-! *.color11:      #f0c674
-!
-! ! blue
-! *.color4:       #5f819d
-! *.color12:      #81a2be
-!
-! ! magenta
-! *.color5:       #85678f
-! *.color13:      #b294bb
-!
-! ! cyan
-! *.color6:       #5e8d87
-! *.color14:      #8abeb7
-!
-! ! white
-! *.color7:       #707880
-! *.color15:      #c5c8c6
 
 #define nord0 #2E3440
 #define nord1 #3B4252

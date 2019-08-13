@@ -5,6 +5,7 @@
 .config/i3/config
 .config/nvim/
 .config/polybar/config
+.config/polybar/spotify.py
 .config/rofi/config.rasi
 .config/zathura/zathurarc
 .dircolors

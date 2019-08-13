@@ -41,6 +41,7 @@ process_config = {
     # "network":   ["/usr/bin/nmcli", "--color=no", "monitor"]
     "battery":   ["/usr/bin/inotifywait",
                   "/sys/class/power_supply/BAT0/capacity",
+                  "/sys/class/power_supply/BAT0/status",
                   "-m"]
 }
 process_timeouts = {
@@ -196,7 +197,7 @@ def get_battery_info():
     text = text.split(", ")[:2]
 
     status = text[0]
-    charge = int(text[1][:-1])
+    charge = int(text[1].strip("%\n"))
 
     if charge > 97:
         icon = "full"
